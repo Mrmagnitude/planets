@@ -31,3 +31,4 @@ theme_switcher.addEventListener("click",function(){page.setAttribute('data-theme
 document.addEventListener("DOMContentLoaded", function() {
     page.setAttribute('data-theme',localStorage.getItem("theme_prefrence"))
 });
+console.log("hello world");
