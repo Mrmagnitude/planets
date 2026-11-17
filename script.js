@@ -29,6 +29,6 @@ const change=()=>page.setAttribute('data-theme',themeValue())
 /* event lisinner fo the theme button */
 theme_switcher.addEventListener("click",change);
 
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function() {
     page.setAttribute('data-theme',localStorage.getItem("theme_prefrence"))
-}
+});
