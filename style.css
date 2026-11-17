@@ -1,0 +1,225 @@
+:root {
+    color-scheme: dark light;
+    --head1:32px;
+    --head2:26px;
+    --head3:22px;
+    --small:18px;
+    --xsmall:15px;
+    --xxsmall:13px;
+
+}
+
+body {
+    background-color:var(--neutral--);
+}
+
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+    >button{
+    outline:none;
+    background:transparent;
+    border:none;
+    margin:0;
+    display:flex;
+    align-items: center;
+    gap:16px;
+    width:76px;
+    height:20px;
+    color: var(--text1--);
+    &:hover {
+        cursor:pointer;
+        background:transparent;
+        color: var(--toggle-theme--);
+    }
+    
+    >div{
+        color:inherit;
+        font-size:var(--xxsmall);
+        line-height: 140%;
+        letter-spacing: 2.5px;
+        text-transform:uppercase;
+        font-weight: 700;
+
+    }
+
+    >img{
+        width:20px;
+        height: 20px;
+    }}
+}
+.search {
+    margin-top:30px;  
+    background-color: var(--neutral-base--);
+    color: var(--search_field--);
+    >img{
+        width:24px;
+        }
+    >input{
+        color:inherit;
+        width:90%;
+        height:25px;
+        border:none;
+        outline:none;
+        background:transparent;
+    }
+    >button {
+        border:none;
+        height:48px;
+        width:107px;
+        font-weight: 700;
+        border-radius: 10px;
+        color: var(--search-text--);
+        background-color:var(--button_bckgrnd);
+        &:hover{
+            cursor:pointer;
+            background-color: var(--toggle-search--);
+        }
+    }
+    height:69px;
+    border:none;
+    border-radius:16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:20px;
+    padding-left:24px;
+    padding-right: 24px;
+    margin-bottom: 20px;
+    &:has(:focus-visible){
+            border: 2px solid var(--button_bckgrnd);
+        }
+}
+.display_area{
+    width:100%;
+    height:420px;
+    border-radius:15px;
+    background-color: var(--neutral-base--);
+
+}
+
+.planet_facts {
+    >h1{
+        font-weight: 600;
+        line-height: 150%;
+        letter-spacing: -2%;
+        color: var(--fact-head--);
+    }
+    >p {
+        font-weight: 400;
+        font-size: var(--small);
+        letter-spacing: 0;
+        line-height: 150%;
+        color: var(--para1--);
+    }
+    .rowhead{
+        background-color: blue;
+    }
+    >table{
+    >caption{
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--th-head----);
+    }
+        width:100%;
+        color:black;
+        table-layout: fixed;
+        border-collapse: collapse;
+        border: 5px solid white;
+        border-radius: 20px;  
+    }
+    
+    .planets-class{
+        background-color: lightblue;
+    }
+    .planets-data{
+        background-color: whitesmoke;
+    }
+
+}
+
+
+footer{
+    >h2{
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: -2%;
+        line-height: 150%;
+    }
+    >p {
+        font-size: 16px;
+        font-weight:500;
+    }
+    color: var(--search_field--);
+    height:74px;
+    display:flex;
+    justify-content: space-between;
+}
+/* moile view */
+@media (max-width:599px){
+    body{
+        padding:32px 16px;
+    }
+}
+/* tablet view */
+@media (min-width:600px) {
+    body{
+        padding:40px 32px;
+    }
+}
+/* desktop view */
+@media (min-width:992px){
+   body {
+     padding:130px 355px;
+}
+}
+
+/* themes settings  light themes */
+[data-theme="light"]{
+    .logo.light{
+        display:none;
+    }
+    header>button>div::before{
+        content:"dark";
+    }
+    color-scheme:light;
+    --white--: #ffffff;
+    --black: #0f2a44;
+    --neutral--: #F6F8Ff;
+    --neutral-base--:#ffffff;
+    --text1--: #2b3442;
+    --toggle-theme--: #2b3442;
+    --theme-button--:#4b6a9b;
+    --button_bckgrnd:#0079ff;
+    --search-text--:#ffffff;
+    --toggle-search--: #60abff;
+    --search_field--: #4b6a9b;
+    --fact-head--:#164baf;
+    --para1--:#0f2a44;
+    --th-head--:#0f2a44;
+}
+/* themes settings dark theme */
+
+[data-theme="dark"]{
+    .logo.dark{
+        display:none;
+    }
+    header>button>div::before{
+        content:"light"
+    }
+    color-scheme:dark;
+    --neutral--: #141D2f;
+    --neutral-base--:#1E2A47;
+    --text1--: #90a4da;
+    --toggle-theme--: #ffffff;
+    --button_bckgrnd:#0079ff;
+    --toggle-search--: #60abff;
+    --search_field--: #90A4da;
+    --theme-button--:#90a4da;
+    --search-text--: #ffffff;
+    --fact-head--:#F0f1f2;
+    --para1--:#90a4d4;
+    --th-head--:#d1e3ff;
+}

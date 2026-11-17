@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>stargazer-log</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/style.css">
+    <title>Planets</title>
 </head>
-<body>
-  A log of the repositories I've started
-  <p> the life that we live in this world is one that is really amazing and eye opeing it is of a truth that God is good</p>
-  <span> Log items</span>
+<body data-theme="">
+    <header><img  class="logo dark"  src="/Assets/logo_black.png" alt="dark theme logo image"><img class="logo light" src="/Assets/logo_light.png" alt="light theme">
+        <button class="themes" id="theme-switch">
+            <div class="themes text" ></div><img  class= "logo dark" src="/Assets/Theme_dark.png" alt="themes logo"> 
+        <img class="logo light" alt="logo light icon" src="./Assets/Theme_light.png"></button>
+    </header>
+    <main>
+        <section class="search">
+            <img src="./Assets/Search_Icon_light.png" alt="search icon"> 
+            <input class="search-input" type="text" placeholder="Search  Planet name">
+            <button>Search</button></section>
+            
+        <section class="display_area"></section>
+        <section class="planet_facts">
+          <h1> Planetary Facts at a Glance</h1>
+          <p> Below is a comparative table of major planets in our solar system. The data highlight key physical properties used by astronomers and researchers worldwide.</p>
+          <table>
+            <caption>Data about the planets of our solar system (Planetary facts taken from NASA)</caption>
+            <tr scope="row group" class=" rowhead"><th colspan="2"></th><th>Name</th><th>Mass (10 24kg)</th><th>Diameter (km)</th></tr>
+            <colgroup>
+            <col span="2" class="planets-class"/>
+            <col span="3" class="planets-data"/></colgroup>
+            <tr><th scope="row" colspan="2" rowspan="4"> Terrestial Planet</th><td>Mecury</td><td>0.330</td><td>4,878</td></tr>
+            <tr><td>Venus</td><td>0.330</td><td>4,878</td></tr>
+            <tr><td>Earth</td><td>0.330</td><td>4,878</td></tr>
+            <tr><td>Mars</td><td>0.330</td><td>4,878</td></tr>
+            <th scope="row" rowspan="4">Jovian Planets</th><th scope="row" rowspan="2">Gas Giants</th><td>Jupiter</td><td>0.330</td><td>4,878</td>
+            <tr><td>Saturn</td><td>0.330</td><td>4,878</td></tr>
+            <th scope="row" rowspan="2">Ice Giants</th><td>Uranus</td><td>0.330</td><td>4,878</td>
+            <tr><td>Neptune</td><td>0.330</td><td>4,878</td></tr>
+            <th scope="row" colspan="2">Dwarf Planets</th><td>Pluto</td><td>0.330</td><td>4,878</td>
+
+          </table>
+        </section>
+    </main>
+    <footer> <div class="left"> <h2> About</h2>
+    <p> first name of group members</p></div><div class="right"> <p>2026 Design by Victor U George</p>
+    <p> Built by Magnitude Group . All rights reserved</p>
+<p>TSAcademy</p></div></footer>
+<script src="./Assets/script.js"></script>
 </body>
 </html>
