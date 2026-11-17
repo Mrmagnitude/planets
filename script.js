@@ -23,8 +23,8 @@ function themeValue () {
         localStorage.setItem("theme_prefrence","dark")
         return "dark"
 }
-/* a function too change the current theme to the desired themes
-event lisinner fo the theme button */
+/* an event listinner to listen and respond to clicks on the theme toggle button
+*/
 theme_switcher.addEventListener("click",function(){page.setAttribute('data-theme',themeValue())}
 );
 
