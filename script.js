@@ -23,11 +23,10 @@ function themeValue () {
         localStorage.setItem("theme_prefrence","dark")
         return "dark"
 }
-/* a function too change the current theme to the desired themes */
-const change=()=>page.setAttribute('data-theme',themeValue())
-
-/* event lisinner fo the theme button */
-theme_switcher.addEventListener("click",change);
+/* a function too change the current theme to the desired themes
+event lisinner fo the theme button */
+theme_switcher.addEventListener("click",function(){page.setAttribute('data-theme',themeValue())}
+);
 
 document.addEventListener("DOMContentLoaded", function() {
     page.setAttribute('data-theme',localStorage.getItem("theme_prefrence"))
